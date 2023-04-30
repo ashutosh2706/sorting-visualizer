@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>🚀Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="main-heading">
+            <h1>🚀Sorting Visualizer</h1>
+            <i class="bi bi-brightness-high-fill" id="toggle-theme"></i>
+        </div>
+        <nav>
+            <div class="array-inputs">
+                <p>Array Size:</p>
+                <input id="a_size" type="range" min=20 max=130 step=1 value=80>
+                <p>Simulation Speed:</p>
+                <input id="a_speed" type="range" min=1 max=10 step=1 value=5>
+                <p>Algorithm: </p>
+                <div class="dropdown">
+                    <div class="select">
+                        <span class="selected">Bubble Sort</span>
+                        <div class="caret"></div>
+                    </div>
+                    <ul class="menu">
+                        <li class="active">Bubble Sort</li>
+                        <li>Selection Sort</li>
+                        <li>Insertion Sort</li>
+                        <li>Quick Sort</li>
+                        <li>Merge Sort</li>
+                        <li>Heap Sort</li>
+                    </ul>
+                </div>
+                <button id="a_generate">START</button>
+            </div>
+        </nav>
+    </header>
+    <div id="msg-container">
+        <div id="msg">Message</div>
+        <button id="msg-btn" onclick="hide()">OK</button>
+    </div>
+    <section>
+        <div class="left-spacer"></div>
+        <div id="array_container" class="array_container">
+            Array Container
+        </div>
+        <div class="right-spacer"></div>
+    </section>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/visuals.js"></script>
+    <script src="scripts/bubble-sort.js"></script>
+    <script src="scripts/selection-sort.js"></script>
+    <script src="scripts/insertion-sort.js"></script>
+    <script src="scripts/quick-sort.js"></script>
+    <script src="scripts/merge-sort.js"></script>
+    <script src="scripts/heap-sort.js"></script>
+    <script src="scripts/theme.js" defer></script>
+</body>
+</html>
